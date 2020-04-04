@@ -46,4 +46,14 @@ public class UserRegistrationTests {
         UserRegistration userRegistration = new UserRegistration();
         Assert.assertFalse(userRegistration.checkMobileNumber("91320162568"));
     }
+    @Test
+    public void givenValidPasswordFormat_shouldReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        Assert.assertTrue(userRegistration.checkPassword("abcdefgh"));
+    }
+    @Test
+    public void givenInvalidPasswordFormat_shouldReturnFalse() {
+        UserRegistration userRegistration = new UserRegistration();
+        Assert.assertFalse(userRegistration.checkPassword("abcb"));
+    }
 }
