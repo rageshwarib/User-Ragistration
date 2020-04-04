@@ -36,4 +36,14 @@ public class UserRegistrationTests {
         UserRegistration userRegistration = new UserRegistration();
         Assert.assertFalse(userRegistration.checkEmail("abc..2002@gmail.com"));
     }
+    @Test
+    public void givenValidMobileFormat_shouldReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        Assert.assertTrue(userRegistration.checkMobileNumber("91 9876543210"));
+    }
+    @Test
+    public void givenInvalidMobileFormat_shouldReturnFalse() {
+        UserRegistration userRegistration = new UserRegistration();
+        Assert.assertFalse(userRegistration.checkMobileNumber("91320162568"));
+    }
 }
