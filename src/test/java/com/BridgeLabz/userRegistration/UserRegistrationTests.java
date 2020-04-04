@@ -26,4 +26,14 @@ public class UserRegistrationTests {
         UserRegistration userRegistration = new UserRegistration();
         Assert.assertFalse(userRegistration.checkName("cat"));
     }
+    @Test
+    public void givenValidEmail_shouldReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        Assert.assertTrue(userRegistration.checkEmail("abc.100@yahoo.com"));
+    }
+    @Test
+    public void givenInvalidEmail_shouldReturnFalse() {
+        UserRegistration userRegistration = new UserRegistration();
+        Assert.assertFalse(userRegistration.checkEmail("abc..2002@gmail.com"));
+    }
 }
