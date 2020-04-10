@@ -6,7 +6,7 @@ public class UserRegistration {
     static String NamePattern = "^[A-Z][a-zA-Z]{2,}$";
     static String EmailPattern = "^[\\w]+.?[\\w]+?@[\\w]+.[a-zA-Z]+.?[a-zA-Z]+?$";
     static String MobilePattern = "^[1-9]{2}[ ][0-9]{10}$";
-    static String PasswordPattern = "^[\\w](?=.*[A-Z])(?=.*\\d).{8,}$";
+    static String PasswordPattern = "^(?=.*[A-Z])(?=.*\\d)(?=^\\w*\\W\\w*$).{8,}$";
 
     public boolean checkName(String UserName) {
         return Pattern.matches(NamePattern, UserName);
