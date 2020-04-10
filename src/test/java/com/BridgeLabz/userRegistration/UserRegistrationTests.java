@@ -49,11 +49,11 @@ public class UserRegistrationTests {
     @Test
     public void givenValidPasswordFormat_shouldReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
-        Assert.assertTrue(userRegistration.checkPassword("abcdefgh"));
+        Assert.assertTrue(userRegistration.checkPassword("FghfDnnm"));
     }
     @Test
     public void givenInvalidPasswordFormat_shouldReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
-        Assert.assertFalse(userRegistration.checkPassword("abcb"));
+        Assert.assertFalse(userRegistration.checkPassword("abc#@#$%b"));
     }
 }
